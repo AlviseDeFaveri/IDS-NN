@@ -1,0 +1,38 @@
+This Section describes how the Neural Network models where built and how the learning hyperparameters where set.
+
+%-------
+\subsection{Project Environment}
+
+This project has been carried out using python3.6. To build the ANN model, the Keras library has been employed, with TensorFlow as a backend. The whole project has been developed on a Jupyter Notebooks project hosted on Google Colab \cite{project}. 
+
+%-------
+\subsection{Building the Neural Network}
+
+The approach for constructing the neural network for this work has been to try different combinations of layers and see how each model performs in terms of accuracy and loss, comparing these two metrics for the train and test set.
+
+All neural networks have been implemented in Keras \cite{kerass} using the Sequential (i.e. feed-forward) model and Dense (i.e. fully interconnected) layers. Following the work of \cite{deepshallow}, the tested models consists of both \textit{shallow} networks and \textit{deep} networks with 2 hidden layers.
+
+
+%-------
+\subsection{Hyperparameters}
+
+The hyperparameters regarding the optimization and learning of each model have been mostly kept at the default values provided by Keras \cite{keras}. These are some of the defaults that Keras provides:
+
+\begin{itemize}
+    \item Learning Rate: 0.001
+    \item Dropout: None
+    \item Optimization Algorithm: Adam
+\end{itemize}
+
+%-------
+\subsection{Epochs}
+
+Each model was trained with a fixed number of epochs (\textbf{150}) and batch size = \textbf{10} for comparison purposes. In future developments, fixed epochs could be substituted by early stopping to speed up the learning phase.
+
+%-------
+\subsection{Activation Function}
+
+Finally, the chosen activation function for all layers is the \textbf{sigmoid} function, which has proven to outperform other tested solutions, like using \textit{relu} for the input layer or \textit{tanh} for the hidden layers. 
+
+
+

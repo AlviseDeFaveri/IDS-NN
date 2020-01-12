@@ -1,0 +1,31 @@
+%-------
+\subsection{Intrusion Detection Systems}
+
+Intrusion Detection is a key concept in modern computer networks security. Rather than protecting a network against known malware by preventing the connection to enter the network, as in Intrusion Prevention Systems, Intrusion Detection is aimed to analyzing the current state of a network in real-time and identify potential anomalies that are happening in the system, reporting them as soon as they are identified. This enables the possibility to detect previously unknown malware \cite{ids}.
+
+Intrusion Detection Systems are generally classified according to the following categories \cite{idsclass}:
+
+\begin{itemize}
+    \item \textbf{Anomaly Detection vs Misuse Detection}:  In misuse detection, each instance in a data set is labeled as ‘normal’ or ‘intrusive’ and a learning algorithm is trained over the labeled data. Anomaly detection approaches, on the other hand, build models of normal data and detect deviations from the normal model in observed data.
+    \item  \textbf{Network-based vs Host-based}: Network intrusion detection systems (NIDS) are placed at a strategic point or points within the network to monitor traffic to and from all devices on the network, while Host intrusion detection systems (HIDS) run on individual hosts or devices on the network.
+\end{itemize}
+
+The object of this work, in particular, is the production of a NIDS trained on labelled data which is able to recognize suspect behaviour in a network and classify each connection as normal or anomalous.
+
+%-------
+\subsection{Artificial Neural Networks}
+
+Artificial Neural Networks are supervised machine learning algorithms inspired by the human brain. The main idea is to have many simple units, called \textit{neurons}, organized in \textit{layers}. In particular, in a feed-forward artificial neural network all neurons of a layer are connected to all the neurons of the following layer, and so on until the last layer, which contains the \textit{output} of the neural network.
+
+This kind of networks are a popular choice among Data Mining techniques in now days, and have already been proven to be a valuable choice for Intrusion Detection \cite{nnids,nnids2}.
+
+In this work we are using feed-forward neural networks trained on the NSL-KDD dataset to classify network connections as belonging to one of two possible categories: \textit{normal} or \textit{anomalous}. The goal of this work is to maximize the accuracy in recognizing new data samples, while also avoid \textit{overfitting}, which happens when the algorithm is too attached to the data it learned and is not capable of correctly generalizing on previously unseen data.
+
+%-------
+\subsection{The NSL-KDD Dataset}
+
+The dataset used for training and validation of the neural network is the NSL-KDD dataset, which is an improved version of the KDD CUP '99 dataset \cite{nslkdd, nslkdd2}. This data set is a well known benchmark in the field of Network Intrusion Detection techniques, providing 42 features for each example and many anomalous examples.
+
+The dataset has been taken from the University of New Brunswick's website.\cite{dataset}.
+
+A detailed analysis of the dataset is provided in the next Section.

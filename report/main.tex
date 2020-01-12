@@ -1,0 +1,112 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+\usepackage{dcolumn}
+\usepackage{placeins}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+ 
+\urlstyle{same}
+
+\title{A Network Intrusion Detection System realized using Neural Networks}
+\author{Alvise de' Faveri Tron\\
+\textit{Advanced Data Exploration and Optimization}\\
+\textit{EISTI}}
+\date{December 2019}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{A Network Intrusion Detection System realized using Neural Networks\\
+}
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} Alvise de' Faveri Tron}
+\IEEEauthorblockA{\textit{Advanced Data Exploration and Optimization} \\
+\textit{EISTI}\\
+Cergy, France \\
+defaveritr@eisti.eu}
+}
+
+\maketitle
+
+\begin{abstract}
+
+Faced with the increase of more advanced attacks targeting information systems, a defense system has become vital. An intrusion detection system provides a first line of defense. 
+A intrusion detection system monitor events within an information system or in one of the organs of the information system
+The objective of this research project is to design a lightweight intrusion detection system using artificial intelligence techniques, in particular deep learning techniques. 
+The neural network will be trained and tested with the NSL KDD dataset.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Neural Networks, Intrusion Detection, Computer Security
+\end{IEEEkeywords}
+
+%-------
+\section{Introduction}
+\label{chapter:introduction}
+\input{1-introduction.tex}
+
+%-------
+\section{Dataset Analysis}
+\label{chapter:dataset}
+\input{2-dataset.tex}
+
+%-------
+\section{Data Preparation}
+\label{chapter:dat-preparation}
+\input{3-data-preparation.tex}
+
+%-------
+\section{Feature Selection}
+\label{chapter:feature-selection}
+\input{4-feature-selection.tex}
+
+%-------
+\section{The Model}
+\label{chapter:the-nn-model}
+\input{5-the-nn-model.tex}
+
+%-------
+\section{Validation}
+\label{chapter:validation}
+\input{6-validation.tex}
+
+%-------
+\section{Deployment in a Network}
+\label{chapter:deployment}
+\input{7-deployment.tex}
+
+%-------
+\section{Future Work}
+\label{chapter:future}
+
+This work represents only a preliminary analysis of how a NIDS can be modelled and deployed using ANN and TensorFlow.
+
+Many improvements can be made to the models in order to get better performances, such as implementing early stopping instead of a fixed amount of epochs and adapt the keras model to work with TPUs (Tensor Processing Units) which can significantly improve the training time needed.
+
+Also, an in-depth analysis of a target network should be performed in order to deploy the IDS in a real network. Problems as the efficiency, delay and the samples collection in the new network environment are specific of each network, and have to be taken into account if we want to carry out the IDS deployment.
+
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}
