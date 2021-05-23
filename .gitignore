@@ -1,0 +1,4 @@
+*.pkl
+*/models/*
+*/venv/*
+*/figs/*
