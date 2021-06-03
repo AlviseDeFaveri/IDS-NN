@@ -1,5 +1,5 @@
 # IDS-NN
-*Network Intrusion Detection System realized using a simple neural network.*
+*Intrusion Detection System exampple realized using a simple neural network.*
 
 The NN provides a binary classification for connections by labeling them as *normal* or *anomalous*. Training and testing is performed on the NSL-KDD dataset. A detailed analysis is provided in the `IDS_NN.pdf` file.
 
